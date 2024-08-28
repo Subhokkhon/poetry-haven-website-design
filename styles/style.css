@@ -1,0 +1,175 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding-top: 80px; /* Space for fixed header */
+    padding-bottom: 60px; /* Space for fixed footer */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav button, nav input {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+nav button {
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #ff4a3b;
+}
+
+nav input {
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.search-results {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 200px;
+    margin-top: 5px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.poet-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.poet-item:hover {
+    background-color: #f4f4f4;
+}
+
+main {
+    padding: 50px;
+}
+
+.intro {
+    margin-top: 120px; /* Adjust margin-top to ensure space from the header */
+    margin-bottom: 30px;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+.gallery {
+    padding: 20px;
+}
+
+.gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 300px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .gallery-grid {
+        flex-direction: column;
+    }
+}
